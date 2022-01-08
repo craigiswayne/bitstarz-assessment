@@ -1,0 +1,17 @@
+{
+  "name": "bitstarz.io",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "compile:sass": "node-sass src/styles -o dist/styles --source-comments=false --source-map=true --output-style=compressed --error-bell",
+    "watch:sass": "npm run compile:sass -- --watch",
+    "watch": "npm run watch:sass"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "node-sass": "^7.0.1"
+  }
+}

@@ -1,0 +1,68 @@
+// TODO: sort this shit out
+//@mixin fontFaces($fontFamily, $value...) {
+//  @each $vendor in ('-webkit-', '-moz-', '-ms-', '-o-', '') {
+//    #{$vendor}#{$name}: #{$value};
+//  }
+//}
+
+//@font-face {
+//  font-family: "DroidSerif";
+//  src: url("DroidSerif-Regular-webfont.ttf") format("truetype");
+//  font-weight: normal;
+//  font-style: normal;
+//}
+//
+//@font-face {
+//  font-family: "DroidSerif";
+//  src: url("DroidSerif-Italic-webfont.ttf") format("truetype");
+//  font-weight: normal;
+//  font-style: italic;
+//}
+//
+//@font-face {
+//  font-family: "DroidSerif";
+//  src: url("DroidSerif-Bold-webfont.ttf") format("truetype");
+//  font-weight: bold;
+//  font-style: normal;
+//}
+//
+//@font-face {
+//  font-family: "DroidSerif";
+//  src: url("DroidSerif-BoldItalic-webfont.ttf") format("truetype");
+//  font-weight: bold;
+//  font-style: italic;
+//}
+
+
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 0; //TODO check if this is ok
+}
+
+h1 {
+  font-weight: 300;
+  font-size: 3.75rem;
+  line-height: 4.5rem;
+}
+
+h2 {
+  font-weight: 300;
+  font-size: 2.5rem;
+  line-height: 3.75rem;
+}
+
+h4 {
+  font-size: 1.75rem;
+  font-weight: 500;
+}
+
+h5 {
+  font-size: 1.5rem;
+  font-weight: 500;
+}
+
+h6 {
+  font-size: 1.125rem;
+  line-height: 1.375rem;
+  font-weight: normal;
+}

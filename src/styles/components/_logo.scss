@@ -1,0 +1,10 @@
+.component.logo {
+  display: flex;
+  flex-direction: row;
+  flex-grow: 1;
+
+  img {
+    height: 40px;
+    width: 40px;
+  }
+}

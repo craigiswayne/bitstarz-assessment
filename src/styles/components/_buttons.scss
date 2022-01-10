@@ -1,0 +1,27 @@
+@import '../_utils.scss';
+/**
+TODO: use rem where possible
+ */
+button {
+  outline: none;
+  padding: 16px 40px;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 22px;
+  color: white;
+  border-width: 2px;
+  border-style: solid;
+
+  @include vendorPrefix(border-radius, 10px);
+
+  &.primary {
+    border-color: var(--color-primary);
+    background: var(--color-primary);
+  }
+
+  &.outline {
+    background: none;
+    border-color: rgba(255, 255, 255, 0.4);
+  }
+}

@@ -2,6 +2,6 @@
     <div class="container animate fade-in-from-left">
         <h5 class="color-text-tertiary">Tune up your workouts</h5>
         <h1>Start your training now</h1>
-        <div><?php partial('components/button', ['text' => 'Get Started', 'color' => 'primary', 'size' => 'small']); ?></div>
+        <div><?php partial('components/button', ['text' => 'Get Started', 'color' => 'primary', 'size' => 'small', 'cssClasses' => 'launch-modal']); ?></div>
     </div>
 </section>

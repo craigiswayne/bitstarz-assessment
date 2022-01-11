@@ -1,0 +1,28 @@
+.card.playlist {
+  .image-container {
+    position: relative;
+    margin: 20px auto;
+    border-radius: 50% / 10%;
+    color: white;
+    text-align: center;
+    text-indent: .1em;
+    transform: skew(-0.1rad);
+    overflow: hidden;
+    width: 420px;
+    @media (max-width: 420px){
+      width: 100%;
+    }
+    max-width: 100%;
+
+    &:before {
+      content: '';
+      position: absolute;
+      top: 10%;
+      bottom: 10%;
+      right: -5%;
+      left: -5%;
+      background: inherit;
+      border-radius: 5% / 50%;
+    }
+  }
+}

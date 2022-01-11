@@ -3,14 +3,13 @@
 		<div class="card-columns row justify-content-center">
             <?php
             $courses = [
-	            ['title' => 'Fitness', 'description' => 'Push your limits'],
-	            ['title' => 'Aerobic', 'description' => 'Look good, feel good'],
-	            ['title' => 'Power Lifting', 'description' => 'Get fit quickly']
+	            ['title' => 'Fitness', 'description' => 'Push your limits', 'imageURL' => '/images/course-1.png'],
+	            ['title' => 'Aerobic', 'description' => 'Look good, feel good', 'imageURL' => '/images/subscribe-form-image.png'],
+	            ['title' => 'Power Lifting', 'description' => 'Get fit quickly', 'imageURL' => '/images/course-3.png']
             ];
             
             foreach($courses as $index => $course) {
                 $course['cssClasses'] = "delay-${index}";
-                $course['imageURL'] = "/images/course-".($index+1).".png";
 	            partial('components/card-course', $course);
             }
             ?>

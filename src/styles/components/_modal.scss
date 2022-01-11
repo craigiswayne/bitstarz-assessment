@@ -1,0 +1,170 @@
+.modal {
+  display: none;
+  position: fixed;
+  height: 100vh;
+  width: 100vw;
+  left: 0;
+  top: 0;
+  z-index: 101;
+  justify-content: center;
+  align-items: center;
+
+  .content {
+    width: 720px;
+    max-width: 100%;
+    background-color: white;
+    height: 400px;
+    max-height: 100%;
+    border-radius: 1rem;
+    overflow: hidden;
+
+    .left {
+      padding: 1.875rem;
+      flex-grow: 1;
+    }
+
+    h5 {
+      margin-bottom: 1.875rem;
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+
+      > * {
+        margin-bottom: 1.25rem;
+      }
+
+    }
+
+    .field {
+      input {
+        border: none;
+        position: relative;
+        z-index: 2;
+        background: none;
+        padding: 1.25rem;
+        outline: 1px solid #C4C9DA;
+        width: 100%;
+        border-radius: 0.675rem;
+
+        &:focus,
+        &.invalid {
+          outline-width: 2px;
+        }
+
+        &:focus,
+        &.invalid,
+        &.valid {
+          & + label {
+            font-size: 0.75rem;
+            top: -0.55rem;
+            left: 0.75rem;
+            background-color: white;
+            z-index: 2;
+            padding: 0 0.3rem;
+          }
+        }
+
+        &:focus {
+          outline-color: var(--color-primary);
+
+          & + label {
+            color: var(--color-primary);
+          }
+        }
+
+        &.invalid {
+          outline-color: #EF194C;
+
+          &,
+          & + label {
+            color: #EF194C;
+          }
+
+          & ~ .icon.error {
+            display: block;
+          }
+        }
+      }
+
+      label {
+        position: absolute;
+        z-index: 1;
+        left: 1.25rem;
+        top: 1.25rem;
+        line-height: 1rem;
+        transition: all 0.3s ease;
+      }
+
+      .icon.error {
+        display: none;
+        position: absolute;
+        right: 1.25rem;
+        top: 1.25rem;
+      }
+
+      .card-icon > * {
+        display: none;
+      }
+    }
+
+    .field-group {
+      > :first-child {
+        flex: 1 1 260px;
+        margin-right: 1rem;
+      }
+    }
+
+    .right {
+      flex-basis: 45%;
+      background-image: url('/images/subscribe-form-image.png');
+      background-size: cover;
+      background-repeat: no-repeat;
+    }
+
+    button {
+      width: 100%;
+    }
+
+  }
+
+  &.show {
+    display: flex;
+  }
+
+  .icon.close {
+    padding: 1rem;
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
+}
+#field-card-number {
+
+  .card-icon{
+    display: none;
+    position: absolute;
+    right: 1rem;
+    top: 1rem;
+  }
+
+  input.valid {
+    ~ .card-icon {
+      display: block;
+    }
+
+    &[card-type=mastercard] ~ .card-icon .mastercard {
+      display: block;
+    }
+
+    &[card-type=visa] ~ .card-icon .visa {
+      display: block;
+    }
+
+    &:not([card-type=mastercard]):not([card-type=visa]) ~ .card-icon .unknown {
+      display: block;
+    }
+  }
+}
+#field-card-number.master {}

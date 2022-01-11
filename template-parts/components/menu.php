@@ -18,7 +18,7 @@
 			<h6><a href="#">Contact</a></h6>
 		</li>
 		<li>
-			<?php partial('components/button', ['text' => 'Get Started Now', 'color' => 'primary', 'size' => 'small']); ?>
+			<?php partial('components/button', ['text' => 'Get Started Now', 'color' => 'primary', 'size' => 'small', 'cssClasses' => 'launch-modal']); ?>
 		</li>
 	</ul>
 </nav>

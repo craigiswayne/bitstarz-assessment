@@ -14,8 +14,6 @@ function partial($partialName, $variables = []) {
     <meta name="format-detection" content="telephone=no" />
     <link rel="profile" href="https://gmpg.org/xfn/11" />
     
-<!--TODO-->
-<!--    <link rel="stylesheet" href="dist/styles/test_mode.css"/>-->
 	<link rel="stylesheet" href="dist/styles/main.css"/>
     <script async src="/src/scripts/main.js"></script>
     <?php partial('head/fonts'); ?>
@@ -31,5 +29,6 @@ function partial($partialName, $variables = []) {
         ?>
     </main>
     <?php partial('footer'); ?>
+    <?php partial('components/subscribe-modal'); ?>
 </body>
 </html>

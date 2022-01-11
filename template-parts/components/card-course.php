@@ -1,8 +1,7 @@
 <div class="animate fade-in-from-bottom <?= $variables['cssClasses']; ?>">
     <div class="card course">
         <div class="inner">
-            <div class="front position-relative">
-                <img src="<?= $variables['imageURL']; ?>" alt="Course Card: <?= $variables['title']; ?>" />
+            <div class="front position-relative bg-overlay" style="background-image: url('<?= $variables['imageURL']; ?>');">
                 <div class='overlay justify-content-end text-content'>
                     <h4><?= $variables['title']; ?></h4>
                     <h6 class="color-text-tertiary"><?= $variables['description']; ?></h6>
@@ -15,7 +14,26 @@
                 </button>
             </div>
             <div class="back color-text-dark position-relative">
-                <div class="text-content">im the back</div>
+                <div class="text-content">
+                    <h4 class="title"><?= $variables['title']; ?></h4>
+                    <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.</p>
+                    <table>
+                        <tbody>
+                            <tr>
+                                <td>Duration</td>
+                                <td>5 weeks</td>
+                            </tr>
+                            <tr>
+                                <td>Goals</td>
+                                <td>Lose weight</td>
+                            </tr>
+                            <tr>
+                                <td>Coach</td>
+                                <td>John Doe</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
                 <button class="cta" aria-label="flip course card button">
                     <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <rect width="24" height="24" rx="12" fill="#9EA1AE"/>

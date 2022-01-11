@@ -1,3 +1,19 @@
+## Result
+
+[![desktop](./walkthrough/result-desktop.png)](https://github.com/craigiswayne/bitstarz-assessment/blob/master/walkthrough/result-desktop.png)
+
+----
+
+## Wakatime
+
+[![wakatime](https://wakatime.com/badge/user/d3b05660-8081-4aff-a845-0c76e2ca3d16/project/6889d93b-588a-4f3a-bce0-4dc9356a2730.svg)](https://wakatime.com/badge/user/d3b05660-8081-4aff-a845-0c76e2ca3d16/project/6889d93b-588a-4f3a-bce0-4dc9356a2730)
+
+[![wakatime](./walkthrough/wakatime.png)](https://github.com/craigiswayne/bitstarz-assessment/blob/master/walkthrough/wakatime.png)
+
+https://wakatime.com/@craigiswayne/projects/bxlxcrizza?start=2022-01-05&end=2022-01-11
+
+----
+
 ## NOTES:
 1. Using alot of the same naming convention as bootstrap
 2. Using php partials for reusability, DRY approach

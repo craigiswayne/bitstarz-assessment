@@ -3,3 +3,17 @@
     #{$vendor}#{$name}: #{$value};
   }
 }
+
+@mixin flex($grow, $shrink, $basis) {
+  -ms-flex: $grow $shrink $basis;
+  flex: $grow $shrink $basis;
+  max-width: $basis;
+}
+
+@mixin for-tablet-and-up {
+  @media (min-width: 768px) { @content; }
+}
+
+@mixin for-mobile-m-and-up {
+  @media (min-width: 425px) { @content; }
+}

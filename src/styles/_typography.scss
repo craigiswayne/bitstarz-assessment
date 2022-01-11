@@ -39,30 +39,59 @@ h1, h2, h3, h4, h5, h6 {
   margin: 0; //TODO check if this is ok
 }
 
-h1 {
-  font-weight: 300;
-  font-size: 3.75rem;
-  line-height: 4.5rem;
+$headings: (
+  1: (
+    font-weight: 300,
+    font-size: 3.75rem,
+    line-height: 4.5rem
+  ),
+  2: (
+    font-weight: 300,
+    font-size: 2.5rem,
+    line-height: 3.75rem
+  ),
+  4: (
+    font-weight: 500,
+    font-size: 1.75rem,
+    line-height: 1.375rem
+  ),
+  5: (
+    font-weight: 500,
+    font-size: 1.5rem,
+    line-height: 1rem
+  ),
+  6: (
+    font-weight: 500,
+    font-size: 1.125rem,
+    line-height: 1.375rem
+  )
+);
+
+@mixin makeHeadingTypography($array) {
+  @each $key, $item in $array {
+
+    //@if map-has-key('line-height', $key) {
+    //  $lineHeight: map-get($map, $key);
+    //} @else {
+    //  $lineHeight: normal;
+    //}
+
+    h#{$key} {
+      font-weight: map-get( $item , font-weight );
+      font-size: map-get( $item, font-size);
+      line-height: map-get($item, line-height);
+
+      @media (max-width: 768px) {
+        font-size: map-get( $item, font-size) * 0.8;
+        line-height: map-get($item, line-height) * 0.8;
+      }
+
+      @media (max-width: 320px) {
+        font-size: map-get( $item, font-size) * 0.6;
+        line-height: map-get($item, line-height) * 0.6;
+      }
+    }
+  }
 }
 
-h2 {
-  font-weight: 300;
-  font-size: 2.5rem;
-  line-height: 3.75rem;
-}
-
-h4 {
-  font-size: 1.75rem;
-  font-weight: 500;
-}
-
-h5 {
-  font-size: 1.5rem;
-  font-weight: 500;
-}
-
-h6 {
-  font-size: 1.125rem;
-  line-height: 1.375rem;
-  font-weight: normal;
-}
+@include makeHeadingTypography($headings);

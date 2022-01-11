@@ -46,12 +46,6 @@ main {
   @include vendorPrefix('transition', filter 0.3s ease);
 }
 
-@import 'typography';
-@import 'components/buttons';
-@import 'components/menu';
-@import 'components/logo';
-@import 'components/card_course';
-
 .row {
   display: flex;
   flex-direction: row;
@@ -107,9 +101,6 @@ main {
   justify-content: end;
 }
 
-/**
-TODO: mixin for this kak
- */
 .color-text-primary {
   color: var(--color-primary);
 }
@@ -142,6 +133,27 @@ TODO: mixin for this kak
 
 .cta {
   cursor: pointer;
+}
+
+.bg-overlay {
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.padding-large-vertical {
+  padding-top: 2.5rem;
+  padding-bottom: 2.5rem;
+
+  @media (max-width: 768px) {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+  }
+}
+
+.padding-vertical {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
 }
 
 #section-hero {
@@ -211,12 +223,6 @@ TODO: mixin for this kak
   }
 }
 
-.bg-overlay {
-  background-position: center center;
-  background-size: cover;
-  background-repeat: no-repeat;
-}
-
 #section-subscribe {
   background: url(/images/bg-getting-started.png);
   padding: 5.5rem;
@@ -240,25 +246,11 @@ TODO: mixin for this kak
   }
 }
 
-/**
-TODO remove unnecessary styles
- */
-
-.padding-large-vertical {
-  padding-top: 2.5rem;
-  padding-bottom: 2.5rem;
-
-  @media (max-width: 768px) {
-    padding-top: 1rem;
-    padding-bottom: 1rem;
-  }
-}
-
-.padding-vertical {
-  padding-top: 1rem;
-  padding-bottom: 1rem;
-}
-
+@import 'typography';
+@import 'components/buttons';
+@import 'components/menu';
+@import 'components/logo';
+@import 'components/card_course';
 @import 'animations';
 @import 'components/testimonial';
 @import 'components/modal';

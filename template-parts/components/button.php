@@ -1,2 +1,1 @@
-<?php $variables = $variables ?? [];?>
-<button class="button <?= $variables['color']; ?> size-<?= $variables['size']; ?>"><?= $variables['text']; ?></button>
+<button class="button cta <?= $variables['color']; ?> size-<?= $variables['size']; ?>" aria-label="Button Text: <?= $variables['text']; ?>"><?= $variables['text']; ?></button>

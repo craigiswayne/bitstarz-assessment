@@ -9,7 +9,7 @@
     "watch": "npm run watch:sass"
   },
   "keywords": [],
-  "author": "",
+  "author": "Craig Wayne",
   "license": "ISC",
   "devDependencies": {
     "node-sass": "^7.0.1"

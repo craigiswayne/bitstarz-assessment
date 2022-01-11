@@ -219,7 +219,6 @@ TODO: mixin for this kak
 
 #section-subscribe {
   background: url(/images/bg-getting-started.png);
-  color: #fff;
   padding: 5.5rem;
   display: flex;
 
@@ -261,3 +260,4 @@ TODO remove unnecessary styles
 }
 
 @import 'components/testimonial';
+@import 'animations';

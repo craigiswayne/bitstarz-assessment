@@ -4,12 +4,40 @@
 TODO: maybe https://codepen.io/heyitsolivia/pen/EICDK
  */
 .card.course {
-  // TODO: this below
-  //background: linear-gradient(0deg, rgba(22, 26, 37, 0.6) 0%, rgba(22, 26, 37, 0) 50%), url(.jpg), #FFFFFF;
-  //border-radius: 16px;
   @include vendorPrefix('border-radius', '16px');
-  // TODO: vendor prefix for this
-  filter: drop-shadow(0px 12px 36px rgba(0, 0, 0, 0.25));
+  @include vendorPrefix(filter, drop-shadow(0px 12px 36px rgba(0, 0, 0, 0.25)));
+  perspective: 1000px;
+
+  .inner, .front, .back {
+    width: 100%;
+    height: 500px;
+  }
+
+  .inner {
+    transition: 0.6s;
+    transform-style: preserve-3d;
+    position: relative;
+  }
+
+  .front,
+  .back {
+    @include vendorPrefix(backface-visibility, hidden);
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-radius: 1rem;
+    overflow: hidden;
+  }
+
+  .front {
+    z-index: 2;
+    transform: rotateY(0deg);
+  }
+
+  .back {
+    background: white;
+    transform: rotateY(180deg);
+  }
 
   .text-content {
     padding: 1.875rem;
@@ -31,4 +59,11 @@ TODO: maybe https://codepen.io/heyitsolivia/pen/EICDK
     }
   }
 
+  &.flip {
+    .inner {
+      transform: rotateY(180deg);
+    }
+  }
 }
+
+

@@ -9,9 +9,11 @@ TODO: use rem where possible
   font-weight: 500;
   font-size: 18px;
   line-height: 22px;
-  color: white;
+  color: inherit;
   border-width: 2px;
   border-style: solid;
+  position: relative;
+  overflow: hidden;
 
   @include vendorPrefix(border-radius, 10px);
 
@@ -23,9 +25,59 @@ TODO: use rem where possible
   &.outline {
     background: none;
     border-color: rgba(255, 255, 255, 0.4);
+
+    &:hover {
+      border-color: var(--color-secondary);
+      color: var(--color-secondary);
+    }
   }
 
   &.size-small {
     padding: 0.6875rem 1.375rem;
+  }
+
+  &:focus {
+    outline: none;
+  }
+
+  &:before, &:after {
+    content: '';
+    display: block;
+    position: absolute;
+    height: 100%;
+    top: 0;
+    transform: translateX(-100px) skewX(-15deg);
+  }
+
+  &:before {
+    background: rgba(255, 255, 255, 0.5);
+    width: 60px;
+    left: 0;
+    opacity: 0.5;
+    filter: blur(30px);
+  }
+
+  &:after {
+    background: rgba(255, 255, 255, 0.2);
+    width: 30px;
+    left: 30px;
+    opacity: 0;
+    filter: blur(5px);
+  }
+
+  &:hover {
+    &:before, &:after {
+      transition: 1s;
+    }
+
+    &:before {
+      transform: translateX(300px) skewX(-15deg);
+      opacity: 0.6;
+    }
+
+    &:after {
+      transform: translateX(300px) skewX(-15deg);
+      opacity: 1;
+    }
   }
 }

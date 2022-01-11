@@ -5,11 +5,13 @@
             <div class="card-columns">
                 <?php
                 $playlists  = [
-                    ['title' => 'Full Body Training', 'imageURL' => '/images/playlist-1.png'],
-                    ['title' => 'Back, Arms & Chest', 'equipment' => 'Weights', 'imageURL' => '/images/playlist-2.png'],
-                    ['title' => 'Let\'s Train Together', 'imageURL' => '/images/playlist-3.png']
+                    ['title' => 'Full Body Training'],
+                    ['title' => 'Back, Arms & Chest', 'equipment' => 'Weights'],
+                    ['title' => 'Let\'s Train Together']
                 ];
-                foreach ($playlists as $playlist) {
+                foreach ($playlists as $index => $playlist) {
+                    $playlist['imageURL'] = '/images/playlist-'.($index+1).'.png';
+                    $playlist['cssClasses'] = 'delay-'.$index;
                     partial('components/card-playlist', $playlist);
                 }
                 ?>

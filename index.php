@@ -3,10 +3,13 @@ function partial($partialName, $variables = []) {
  require __DIR__.DIRECTORY_SEPARATOR.'template-parts'.DIRECTORY_SEPARATOR.$partialName.'.php';
 }
 ?>
-<html class="in-progress">
+<!DOCTYPE html>
+<html lang="en">
 <head>
+    <title>BitStarz Assessment</title>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="description" content="BitStarz Assessment" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="format-detection" content="telephone=no" />
     <link rel="profile" href="https://gmpg.org/xfn/11" />

@@ -20,12 +20,12 @@ nav.menu {
   a {
     text-decoration: none;
 
-    &:hover, &:focus {
-      color: var(--color-secondary);
-    }
-
     &, &:visited {
       color: inherit;
+
+      &:hover, &:focus {
+        color: var(--color-secondary);
+      }
     }
   }
 

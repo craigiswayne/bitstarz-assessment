@@ -70,12 +70,6 @@ $headings: (
 @mixin makeHeadingTypography($array) {
   @each $key, $item in $array {
 
-    //@if map-has-key('line-height', $key) {
-    //  $lineHeight: map-get($map, $key);
-    //} @else {
-    //  $lineHeight: normal;
-    //}
-
     h#{$key} {
       font-weight: map-get( $item , font-weight );
       font-size: map-get( $item, font-size);

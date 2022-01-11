@@ -19,3 +19,4 @@
 // no max-width stuffs
 // check typography on small screens, check menu
 // menu transition
+// scroll on section animation
